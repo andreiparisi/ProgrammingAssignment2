@@ -1,3 +1,5 @@
+#This function creates a list containing the matrix to be inverted and function to calculate the invert
+
 makeCacheMatrix <- function(x =matrix()) {
   inv <- NULL
   set <- function(y) {
@@ -11,6 +13,9 @@ makeCacheMatrix <- function(x =matrix()) {
        setinv = setinv,
        getinv = getinv)
 }
+
+#This function allows to calculate the invert of the matrix found in the result of makeCacheMatrix 
+# and caches the result
 
 cacheSolve <- function(x, ...) {
   inv <- x$getinv()
